@@ -1,4 +1,4 @@
-from app.models import Cliente, Produto, db
+from .models import Cliente, Produto, db
 
 # ----------- CLIENTES --------------
 #AHHHHHHHHHHHHHHHHHHHHHHHHhh

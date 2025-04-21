@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TestTemplateSite</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Brinquedos</h1>
+    <form id="formBrinquedo">
+      <input type="text" id="nomeBrinquedo" placeholder="Nome do Brinquedo" required>
+      <input type="number" id="precoBrinquedo" placeholder="Preço" required>
+      <button type="submit">Salvar</button>
+      <button onclick="location.href='/ver_brinquedos'">Ver Brinquedos</button>
+    </form>
+    <p class="msg" id="msgBrinquedo"></p>
+    <button onclick="location.href='/'">Voltar</button>
+  </div>  
+
+  <footer class="rodape">Feito por Forever</footer>
+</body>
+</html>

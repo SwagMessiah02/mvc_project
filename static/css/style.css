@@ -1,0 +1,138 @@
+body {
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+    
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+    
+  form, ul {
+    margin-top: 20px;
+  }
+    
+  input, button {
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+    
+  button {
+    background-color: #3597ff;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .voltar{
+    margin: 15px 180px;
+    width: 25%;
+  }
+    
+  button:hover {
+    background-color: #00458f;
+  }
+    
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 250px; /* altura máxima da lista */
+    overflow-y: auto;  /* ativa rolagem vertical se ultrapassar o limite */
+    border-radius: 8px;
+  }
+    
+  ul::-webkit-scrollbar {
+    width: 8px;
+  }
+    
+  ul::-webkit-scrollbar-thumb {
+    background-color: #3597ff;
+    border-radius: 10px;
+  }
+    
+  li {
+    margin: 10px 0;
+    background: #cadff7;
+    padding: 10px;
+    border-radius: 5px;
+  }
+    
+  .msg {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }  
+
+  .rodape {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideFadeIn 1.5s ease-out forwards, float 4s ease-in-out infinite;
+  }
+
+  /* Animação de entrada: desliza para cima com fade-in */
+  @keyframes slideFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animação contínua de oscilação horizontal sutil */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+
+    input, button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    span[onclick] {
+      display: inline-block;
+      margin: 5px;
+    }
+
+    ul li {
+      font-size: 16px;
+      word-break: break-word;
+    }
+  }

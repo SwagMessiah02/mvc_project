@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>TestTemplateSite</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Menu Principal</h1>
+    <button onclick="location.href='/usuarios'">Cadastro de Usuários</button>
+    <button onclick="location.href='/brinquedos'">Cadastro de Brinquedos</button>
+  </div>
+
+  <footer class="rodape">
+    Feito por Forever
+  </footer>
+
+</body>
+</html>
